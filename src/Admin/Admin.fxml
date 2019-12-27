@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.AdminController">
+   <children>
+      <TabPane prefHeight="720.0" prefWidth="1200.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Students">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="710.0" prefWidth="1200.0">
+                     <children>
+                        <HBox layoutX="291.0" layoutY="-1.0" prefHeight="709.0" prefWidth="938.0">
+                           <children>
+                              <TableView fx:id="studentData" prefHeight="710.0" prefWidth="910.0">
+                                <columns>
+                                    <TableColumn fx:id="idColumn" prefWidth="94.4000244140625" text="ID" />
+                                    <TableColumn fx:id="firstNameColumn" prefWidth="152.79998779296875" text="First Name" />
+                                    <TableColumn fx:id="lastNameColumn" prefWidth="188.79998779296875" text="Last Name" />
+                                    <TableColumn fx:id="emailColumn" prefWidth="317.59991455078125" text="Email" />
+                                    <TableColumn fx:id="dobColumn" prefWidth="184.0" text="DOB" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </HBox>
+                        <VBox prefHeight="732.0" prefWidth="290.0">
+                           <children>
+                              <Label prefHeight="24.0" prefWidth="291.0" text="Add Students">
+                                 <VBox.margin>
+                                    <Insets left="50.0" />
+                                 </VBox.margin></Label>
+                              <TextField fx:id="newId" promptText="ID">
+                                 <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin></TextField>
+                              <TextField fx:id="firstName" layoutX="10.0" layoutY="34.0" promptText="First Name">
+                                 <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin></TextField>
+                              <TextField fx:id="lastName" layoutX="10.0" layoutY="60.0" promptText="Last Name">
+                                 <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin></TextField>
+                              <TextField fx:id="email" layoutX="25.0" layoutY="85.0" promptText="Email">
+                                 <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <DatePicker fx:id="dob" prefHeight="26.0" prefWidth="290.0" promptText="DOB">
+                                 <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin>
+                              </DatePicker>
+                              <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="292.0"  text="Add Entry" onAction="#addStudent">
+                                  <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button layoutX="25.0" layoutY="163.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="292.0" text="Clear Form" onAction="#clearFields">
+                                  <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button layoutX="10.0" layoutY="189.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="292.0" text="Load Data" onAction="#loadStudentData">
+                                  <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                           
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Admin Section">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
